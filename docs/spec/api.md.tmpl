@@ -814,6 +814,15 @@ response will be issued instead.
 If a layer is deleted which is referenced by a manifest in the registry,
 then the complete images will not be resolvable.
 
+> **Note**  The default Registry configuration disables deletion. To enable
+> deletion, set the `storage` `delete` `enabled` variable to `true`:
+
+```none
+storage:
+  delete:
+    enabled: true
+```
+
 #### Pushing an Image Manifest
 
 Once all of the layers for an image are uploaded, the client can upload the
@@ -1086,6 +1095,15 @@ response will be issued instead.
     Accept: application/vnd.docker.distribution.manifest.v2+json
 
 > for more details, see: [compatibility.md](../compatibility.md#content-addressable-storage-cas)
+
+> **Note**  The default Registry configuration disables deletion. To enable 
+> deletion, set the `storage` `delete` `enabled` variable to `true`:
+
+```none
+storage:
+  delete:
+    enabled: true
+```
 
 ## Detail
 
